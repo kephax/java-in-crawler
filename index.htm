@@ -1,0 +1,150 @@
+/* Author: Craig Erskine Description: Dynamic Menu System - Horizontal/Vertical */ 
+
+ul#navmenu-h { 
+  margin: 0; 
+  padding: 0 0 0 1em; 
+  list-style: none; 
+  position: relative;
+  
+}
+
+ul#navmenu-h a:hover{ 
+  background: transparent url("../img/bg-bubplastic-h-red.jpg") top left repeat-x;
+
+}
+  
+ul#navmenu-h ul { 
+  margin:.5em 0 0 0; 
+  padding:0 0 0 0;
+  width: 160px; /* Sub Menu Width */ 
+  list-style: none; 
+  display: none; 
+  position: absolute; 
+  top: 100%; 
+  left: 0; 
+  border-top:1px solid #fff;
+  border-right:1px solid #000;
+  border-bottom:1px solid #000;
+  border-left:1px solid #fff;
+
+} 
+  
+ul#navmenu-h ul ul,
+ul#navmenu-h ul ul ul { 
+  top: 0; 
+  left: 100%; 
+} 
+  
+ul#navmenu-h ul#navmenu-v {
+  margin:0 0 0 .5em; 
+  background:url("../img/bc-light.png") 0 0 repeat;
+}
+
+ul#navmenu-h ul#navmenu-v li{
+ 
+  background:url("../img/bc-light.png") 0 0 repeat;
+}
+
+ul#navmenu-h li { 
+  display: inline; 
+  float: left; 
+  position: relative; 
+  width:100px;
+  
+  text-align:center;
+  color:#c00;
+} 
+  
+ul#navmenu-h ul li { 
+  width: 100%; 
+  display: block;
+  text-align:left;
+  background:url("../img/bc-light.png") 0 0 repeat;
+} 
+
+ul#navmenu-h ul li a{ 
+  font-weight:bold;
+  width:97%;
+}
+  
+/* Root Menu */ 
+ul#navmenu-h a { 
+  display: block; 
+  float: left; 
+  padding: 6px; 
+  color: #fff; 
+  font: bold 11px Arial, sans-serif; 
+  text-decoration: none; 
+  height: 1%; 
+  width:100px;
+}
+
+/* Root Menu Hover Persistence */ 
+ul#navmenu-h a:hover,
+ul#navmenu-h li:hover a,
+ul#navmenu-h li.iehover a { 
+  color: #FFF; 
+} 
+  
+/* 2nd Menu */ 
+ul#navmenu-h li:hover li a,
+ul#navmenu-h li.iehover li a { 
+  float: none; 
+  padding:.2em .2em;
+  font-weight:normal;
+  color:#000;
+
+}
+
+/* 2nd Menu Hover Persistence */ 
+ul#navmenu-h li:hover li a:hover,
+ul#navmenu-h li:hover li:hover a,
+ul#navmenu-h li.iehover li a:hover,
+ul#navmenu-h li.iehover li.iehover a { 
+  background: #999; 
+} 
+  
+  
+/* 3rd Menu */ 
+ul#navmenu-h li:hover li:hover li a,
+ul#navmenu-h li.iehover li.iehover li a { 
+  background:url("../img/bc-light.png") 0 0 repeat;
+}
+
+
+/* 3rd Menu Hover Persistence */ 
+ul#navmenu-h li:hover li:hover li a:hover,
+ul#navmenu-h li:hover li:hover li:hover a,
+ul#navmenu-h li.iehover li.iehover li a:hover,
+ul#navmenu-h li.iehover li.iehover li.iehover a { 
+  background: #999;
+} 
+  
+/* 4th Menu */ 
+ul#navmenu-h li:hover li:hover li:hover li a,
+ul#navmenu-h li.iehover li.iehover li.iehover li a { 
+  background: #666; 
+} 
+
+/* 4th Menu Hover */ 
+ul#navmenu-h li:hover li:hover li:hover li a:hover,
+ul#navmenu-h li.iehover li.iehover li.iehover li a:hover { 
+  background: #333; 
+} 
+
+/* Hover Function - Do Not Move */ 
+ul#navmenu-h li:hover ul ul,
+ul#navmenu-h li:hover ul ul ul,
+ul#navmenu-h li.iehover ul ul,
+ul#navmenu-h li.iehover ul ul ul { 
+  display: none; 
+} 
+
+ul#navmenu-h li:hover ul,
+ul#navmenu-h ul li:hover ul,
+ul#navmenu-h ul ul li:hover ul,
+ul#navmenu-h li.iehover ul,
+ul#navmenu-h ul li.iehover ul,
+ul#navmenu-h ul ul li.iehover ul { 
+  display: block;
+}
